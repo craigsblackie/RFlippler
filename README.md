@@ -89,20 +89,12 @@ The sweep mode tries the following passwords in order:
 
 | Password   | Source                        |
 |------------|-------------------------------|
-| `BDF5E846` | Paxton Net2 default (Sheldrake analysis) |
+| `BDF5E846` | Paxton Net2 default           |
 | `4D494B52` | NXP/Philips factory default ("MIKR") |
 | `00000000` | All zeros                     |
 | `FFFFFFFF` | All ones                      |
 | `DEADBEEF` | Common test key               |
 | `CAFEBABE` | Common test key               |
-
----
-
-## References
-
-- [Kev Sheldrake — Paxton Net2 analysis](https://github.com/kev-sheldrake/hitag2-crack)
-- [RFIDler by Aperture Labs](http://rfidler.org)
-- [Verdult et al. — "Gone in 360 Seconds"](https://www.cs.bham.ac.uk/~garciaf/publications/gone.pdf)
 
 ---
 
