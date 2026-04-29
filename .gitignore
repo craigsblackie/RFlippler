@@ -1,0 +1,6 @@
+dist/
+*.fap
+*.elf
+compile_commands.json
+__pycache__/
+*.pyc
