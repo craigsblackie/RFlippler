@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TAG_LOG      "RFIDler"
+#define TAG_LOG      "RFlippler"
 #define UART_BAUD    115200
 #define RX_BUF_SZ    512
 #define RESP_SZ      512
@@ -23,7 +23,7 @@
 #define DUMP_MAX      12
 #define SAVED_MAX     24
 #define SAVED_VISIBLE 4
-#define SAVE_DIR      "/ext/apps/rfidler"
+#define SAVE_DIR      "/ext/apps/rflippler"
 
 // Known Paxton / HiTag2 passwords for the sweep mode
 // Source: Kev Sheldrake Paxton analysis + NXP factory defaults
@@ -514,7 +514,7 @@ static int32_t worker(void* ctx) {
 
 static void draw_idle(Canvas* c, App* app) {
     canvas_set_font(c, FontSecondary);
-    canvas_draw_str(c, 0, 9, "RFIDler  pin13=TX  pin14=RX");
+    canvas_draw_str(c, 0, 9, "RFlippler  13=TX  14=RX");
     canvas_draw_line(c, 0, 11, 127, 11);
 
     for(int i = 0; i < MENU_VISIBLE; i++) {
@@ -666,7 +666,7 @@ static void start_read(App* app) {
     app->cur   = &TAGS[app->sel];
     app->state = StateBusy;
     view_port_update(app->vp);
-    app->worker = furi_thread_alloc_ex("rfidler_w", 2048, worker, app);
+    app->worker = furi_thread_alloc_ex("rflippler_w", 2048, worker, app);
     furi_thread_start(app->worker);
 }
 
@@ -684,7 +684,7 @@ static void menu_move(App* app, int dir) {
     view_port_update(app->vp);
 }
 
-int32_t rfidler_app_main(void* p) {
+int32_t rflippler_app_main(void* p) {
     UNUSED(p);
 
     App* app = malloc(sizeof(App));

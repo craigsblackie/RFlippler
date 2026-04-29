@@ -1,12 +1,12 @@
 App(
-    appid="rfidler_hitag2",
-    name="RFIDler HiTag2",
+    appid="rflippler",
+    name="RFlippler",
     apptype=FlipperAppType.EXTERNAL,
-    entry_point="rfidler_app_main",
+    entry_point="rflippler_app_main",
     requires=["gui"],
     stack_size=2 * 1024,
     fap_category="RFID",
-    fap_description="HiTag2 UID reader via RFIDler over UART (GPIO pins 13/14)",
+    fap_description="RFIDler-based HiTag2/Paxton reader over GPIO UART (pins 13/14)",
     fap_author="Craig",
-    fap_version="0.1",
+    fap_version="0.2",
 )
